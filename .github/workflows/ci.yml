@@ -1,4 +1,4 @@
-name: CI Pipeline - DevOps WebApp
+name: CI Pipeline
 
 on:
   push:
@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Run Build Step
-        run: echo "Building the DevOps Web Application..."
+      - name: Build step
+        run: |
+          echo "Starting build..."
+          echo "Build successful!"
 
-      - name: Run Test Step
-        run: echo "Running tests (no tests configured)"
-
-      - name: Finish Job
-        run: echo "CI Pipeline executed successfully!"
+      - name: Run tests
+        run: |
+          echo "No tests configured"
